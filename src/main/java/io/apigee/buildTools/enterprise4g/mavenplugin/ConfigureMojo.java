@@ -71,6 +71,7 @@ public class ConfigureMojo extends GatewayAbstractMojo {
                 PackageConfigurer.configurePackage(super.getProfile().getEnvironment(), configFile);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             logger.error(e.getMessage());
             throw new MojoExecutionException(e.getMessage());
         }
